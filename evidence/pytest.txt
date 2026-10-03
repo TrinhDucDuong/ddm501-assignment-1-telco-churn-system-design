@@ -1,0 +1,13 @@
+COMMAND: python -m pytest -q --junitxml=evidence/pytest.xml
+EXIT: 0
+
+............                                                             [100%]
+============================== warnings summary ===============================
+.venv\lib\site-packages\starlette\testclient.py:37
+  C:\Users\tdd23\OneDrive\Desktop\MyWorkSpace\FSB\K3\DDM501\Turtorial\Individual_Assignment\assignment_1\.venv\lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\tdd23\OneDrive\Desktop\MyWorkSpace\FSB\K3\DDM501\Turtorial\Individual_Assignment\assignment_1\evidence\pytest.xml -
+12 passed, 1 warning in 2.83s
+

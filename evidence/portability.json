@@ -1,0 +1,39 @@
+{
+  "project": "assignment_1",
+  "copied_to_unrelated_temporary_directory": true,
+  "sibling_present": false,
+  "source_import_from_copy": true,
+  "results": [
+    {
+      "command": [
+        "python",
+        "-c",
+        "from pathlib import Path; import churn; assert Path(churn.__file__).resolve().is_relative_to(Path.cwd()); print(churn.__file__)"
+      ],
+      "exit_code": 0,
+      "stdout": "C:\\Users\\tdd23\\AppData\\Local\\Temp\\ddm501-a1-isolated-u5ex2vjr\\churn\\__init__.py\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "............                                                             [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\OneDrive\\Desktop\\MyWorkSpace\\FSB\\K3\\DDM501\\Turtorial\\Individual_Assignment\\assignment_1\\.venv\\lib\\site-packages\\starlette\\testclient.py:37\n  C:\\Users\\tdd23\\OneDrive\\Desktop\\MyWorkSpace\\FSB\\K3\\DDM501\\Turtorial\\Individual_Assignment\\assignment_1\\.venv\\lib\\site-packages\\starlette\\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n12 passed, 1 warning in 18.81s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "churn"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"rows\": 7043,\n  \"data_sha256\": \"16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91\",\n  \"seed\": 42,\n  \"capacity\": 0.2,\n  \"split_sizes\": {\n    \"train\": 4225,\n    \"validation\": 1409,\n    \"test\": 1409\n  },\n  \"missing_total_charges\": 11,\n  \"churn_count\": 1869,\n  \"validation\": {\n    \"average_precision\": 0.673749217651649,\n    \"roc_auc\": 0.8563434860110053,\n    \"brier\": 0.1323525257905058,\n    \"f1\": 0.615606936416185,\n    \"precision\": 0.6698113207547169,\n    \"recall\": 0.56951871657754,\n    \"precision_at_capacity\": 0.6843971631205674,\n    \"recall_at_capacity\": 0.516042780748663,\n    \"lift_at_capacity\": 2.5783839648044906,\n    \"selected_count\": 282,\n    \"prevalence\": 0.2654364797728886,\n    \"tn\": 930,\n    \"fp\": 105,\n    \"fn\": 161,\n    \"tp\": 213\n  },\n  \"test\": {\n    \"average_precision\": 0.6248504830708054,\n    \"roc_auc\": 0.8293097212534553,\n    \"brier\": 0.14257358187193578,\n    \"f1\": 0.5627705627705628,\n    \"precision\": 0.6112852664576802,\n    \"recall\": 0.5213903743315508,\n    \"precision_at_capacity\": 0.6312056737588653,\n    \"recall_at_capacity\": 0.47593582887700536,\n    \"lift_at_capacity\": 2.377991428679789,\n    \"selected_count\": 282,\n    \"prevalence\": 0.2654364797728886,\n    \"tn\": 911,\n    \"fp\": 124,\n    \"fn\": 179,\n    \"tp\": 195\n  },\n  \"baseline_test\": {\n    \"average_precision\": 0.2654364797728886,\n    \"roc_auc\": 0.5,\n    \"brier\": 0.19497996730765565,\n    \"f1\": 0.0,\n    \"precision\": 0.0,\n    \"recall\": 0.0,\n    \"precision_at_capacity\": 0.2730496453900709,\n    \"recall_at_capacity\": 0.20588235294117646,\n    \"lift_at_capacity\": 1.0286816854401335,\n    \"selected_count\": 282,\n    \"prevalence\": 0.2654364797728886,\n    \"tn\": 1035,\n    \"fp\": 0,\n    \"fn\": 374,\n    \"tp\": 0\n  },\n  \"fit_seconds\": 0.04141930001787841,\n  \"p95_model_latency_ms\": 8.044649989460593,\n  \"python\": \"3.10.11\",\n  \"sklearn\": \"1.7.2\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

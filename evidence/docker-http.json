@@ -1,0 +1,21 @@
+{
+  "image": "ddm501-individual1:local",
+  "health": {
+    "status": "ok",
+    "model": "model.joblib"
+  },
+  "http_status": 200,
+  "response": {
+    "predictions": [
+      {
+        "customerID": "7590-VHVEG",
+        "churn_probability": 0.5827476905222507
+      },
+      {
+        "customerID": "5575-GNVDE",
+        "churn_probability": 0.06011388034488325
+      }
+    ]
+  },
+  "real_container_http": true
+}

@@ -1,0 +1,4 @@
+seed: 42
+capacity: 0.2
+data_path: data/telco.csv
+output_dir: artifacts
