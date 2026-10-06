@@ -1,5 +1,6 @@
 {
-  "pages": 11,
+  "review_date": "2026-10-06",
+  "pages": 12,
   "name_verified": true,
   "student_id_verified": true,
   "unresolved_markers": 0,
@@ -10,5 +11,31 @@
     "errors": 0,
     "skipped": 0
   },
-  "visual_review": "All final pages rendered and inspected; tables, diagrams, code blocks and identity text are legible without clipping."
+  "test_evidence": "evidence/repository-pytest.xml (recorded execution; report-only revision)",
+  "repository": "https://github.com/TrinhDucDuong/ddm501-assignment-1-telco-churn-system-design",
+  "clickable_repository_on_cover": true,
+  "external_link_annotations": 8,
+  "unique_external_links": 4,
+  "external_link_checks": [
+    {
+      "url": "https://github.com/TrinhDucDuong/ddm501-assignment-1-telco-churn-system-design",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/TrinhDucDuong/ddm501-assignment-1-telco-churn-system-design/blob/290f2fd761fea87338166124eb507fe30c162a26/evidence/repository-check.json",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/TrinhDucDuong/ddm501-assignment-1-telco-churn-system-design/blob/290f2fd761fea87338166124eb507fe30c162a26/evidence/repository-tests.txt",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/TrinhDucDuong/ddm501-assignment-1-telco-churn-system-design/tree/290f2fd761fea87338166124eb507fe30c162a26",
+      "status": 200
+    }
+  ],
+  "toc_destinations_verified": true,
+  "metrics_match_recorded_evidence": true,
+  "visual_review": "All final pages rendered with Poppler and inspected; no clipping or overlapping text; tables, diagrams, code and Vietnamese identity are legible.",
+  "submission_requirement": "Written PDF report; filename verified against assignment brief; repository provides supplementary code and execution evidence."
 }

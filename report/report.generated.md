@@ -165,6 +165,30 @@ The prior classifier predicts the training churn prevalence for every row. Its A
 
 Neither the local timing measurement nor a successful HTTP request establishes a production SLA. The experiment is a single split without a prospective cohort or causal intervention. Assignment 2 retains the partition contract so model improvements can be attributed to controlled experiment choices; because Assignment 1 already reports this holdout, it must not be treated as a newly unseen prospective dataset. Future production validation requires a fresh chronological cohort.
 
+## 8. Submission evidence and reproduction
+The submitted written report is DDM501_Assignment1_25ms13290_TrinhDucDuong.pdf. It covers the five assessed design areas in the assignment brief. The runnable prototype is supplementary evidence of feasibility; its measured offline performance does not replace the production design and trade-off analysis.
+
+Repository: [ddm501-assignment-1-telco-churn-system-design](https://github.com/TrinhDucDuong/ddm501-assignment-1-telco-churn-system-design). The published [implementation snapshot 290f2fd](https://github.com/TrinhDucDuong/ddm501-assignment-1-telco-churn-system-design/tree/290f2fd761fea87338166124eb507fe30c162a26) identifies the code, configuration, dataset and evidence accompanying this analysis. The report revision updates submission guidance and links; it does not change the trained baseline.
+
+### 8.1 How to verify the prototype
+Clone the repository and run the following commands from its root on Windows with Python 3.10 or 3.11. The setup script creates a project-local environment and installs the recorded dependencies. The verification script checks dependencies, lint, tests, full-data training and a real loopback HTTP request; subsequent runs can have different timings. The README also provides Linux and Docker instructions.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File setup.ps1
+./.venv/Scripts/python.exe scripts/verify.py
+```
+
+The [recorded test output](https://github.com/TrinhDucDuong/ddm501-assignment-1-telco-churn-system-design/blob/290f2fd761fea87338166124eb507fe30c162a26/evidence/repository-tests.txt) contains 12 passed tests with no failures. The [HTTP and environment verification](https://github.com/TrinhDucDuong/ddm501-assignment-1-telco-churn-system-design/blob/290f2fd761fea87338166124eb507fe30c162a26/evidence/repository-check.json) records a healthy service, HTTP 200 for valid predictions and HTTP 422 for invalid input. These are completed local checks, not claims about GitHub Actions or a deployed production service. No sibling assignment directory is required.
+
+### 8.2 Assessment coverage
+| Assessed area | Weight | Location in this report |
+|---|---|---|
+| Problem definition | 20% | Section 1: context, current process, measurable problem, ML rationale and stakeholders |
+| Requirements analysis | 20% | Sections 2-3: functionality, interfaces, performance, scaling, reliability, data and privacy |
+| Goals and metrics | 20% | Section 4: business/system/model hierarchy, baselines, thresholds and pilot design |
+| High-level architecture | 25% | Section 5 and Figure 1: flow, stages, responsibilities and technology choices |
+| Trade-offs analysis | 15% | Section 6: six explicit alternatives, costs and conditions for reconsideration |
+
 ## References and artifact map
 [1] IBM. Telco customer churn sample repository and CSV. https://github.com/IBM/telco-customer-churn-on-icp4d . Dataset snapshot retrieved 3 October 2026; source manifest and checksum are included in data/source.json. The IBM sample describes a fictional telecom company.
 
